@@ -23,9 +23,9 @@
         <version>3.7.0</version>
         <configuration>
           <changeLogFile>
-            src/main/resources/db/changelog/master-changelog.xml
+            ./src/main/resources/db/changelog/master-changelog.xml
           </changeLogFile>
-          <propertyFile>src/main/resources/db/liquibase.properties</propertyFile>
+          <propertyFile>./src/main/resources/db/liquibase.properties</propertyFile>
           <!-- <driver>com.mysql.jdbc.Driver</driver>
           <url>jdbc:mysql://localhost:3306/sample?u‌​seSSL=false</url>          
           <username>liqui</username>
