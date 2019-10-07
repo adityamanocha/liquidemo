@@ -28,6 +28,7 @@
           <changeLogFile>
             src/main/db/changelog/master-changelog.xml
           </changeLogFile>
+         <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
         </configuration>
         <executions>
             <execution>
