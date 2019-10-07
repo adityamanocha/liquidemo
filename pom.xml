@@ -12,6 +12,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.6</maven.compiler.source>
+	<maven.compiler.target>1.6</maven.compiler.target>
   </properties>
 
 
@@ -22,9 +24,9 @@
         <artifactId>liquibase-maven-plugin</artifactId>
         <version>3.7.0</version>
         <configuration>
-         <propertyFile>src/main/resources/db/liquibase.properties</propertyFile>
+         <propertyFile>src/main/db/liquibase.properties</propertyFile>
           <changeLogFile>
-            src/main/resources/db/changelog/master-changelog.xml
+            src/main/db/changelog/master-changelog.xml
           </changeLogFile>
         </configuration>
         <executions>
@@ -40,7 +42,7 @@
   </build>
   
   <dependencies>
-  <dependency>
+    <dependency>
 	    <groupId>mysql</groupId>
 	    <artifactId>mysql-connector-java</artifactId>
 	    <version>5.1.45</version>
