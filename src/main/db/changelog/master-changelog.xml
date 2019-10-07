@@ -11,6 +11,7 @@
     	<createTable tableName="emp">
     		<column name="EmpId" type="int"></column>
     		<column name="EmpName" type="varchar(10)"></column>
+    		<column name="EmpMob" type="int"></column>
     	</createTable>
     </changeSet>
 </databaseChangeLog>
