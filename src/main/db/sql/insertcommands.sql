@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset {devopsadmin}:{change_2}
+--changeset devopsadmin:change_2
 
 
 INSERT INTO emp (EmpId, EmpName, EmpMob) 
