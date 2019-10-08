@@ -14,4 +14,8 @@
     		<column name="EmpMob" type="int"></column>
     	</createTable>
     </changeSet>
+    
+    <changeSet id="change_2" author="devopsadmin">
+       <sqlFile path="db/sql/insertcommands.sql"/>
+    </changeSet>
 </databaseChangeLog>
