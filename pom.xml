@@ -16,31 +16,74 @@
 	<maven.compiler.target>1.6</maven.compiler.target>
   </properties>
 
+<profiles>
+        <profile>
+            <id>release</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+          	  <build>
+			  	<plugins>
+			      <plugin>
+			        <groupId>org.liquibase</groupId>
+			        <artifactId>liquibase-maven-plugin</artifactId>
+			        <version>3.7.0</version>
+			        <configuration>
+			        <dropFirst>false</dropFirst>
+                    <!-- <contexts>test</contexts> -->
+			         <propertyFile>src/main/db/liquibase.properties</propertyFile>
+			          <changeLogFile>
+			            src/main/db/changelog/master-changelog.xml
+			          </changeLogFile>
+			         <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+			        </configuration>
+			        <executions>
+			            <execution>
+			                <phase>process-resources</phase>
+			                <goals>
+			                    <goal>update</goal>
+			                </goals>
+			            </execution>
+			         </executions>
+			     </plugin>
+			    </plugins>    
+			  </build>
+	</profile>
+	<!-- Dev profile -->
+	 <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+          	  <build>
+			  	<plugins>
+			      <plugin>
+			        <groupId>org.liquibase</groupId>
+			        <artifactId>liquibase-maven-plugin</artifactId>
+			        <version>3.7.0</version>
+			        <configuration>
+				        <dropFirst>false</dropFirst>
+	                    <contexts>test</contexts>
+				         <propertyFile>src/main/db/liquibase-dev.properties</propertyFile>
+				          <changeLogFile>
+				            src/main/db/changelog/master-changelog.xml
+				          </changeLogFile>
+				         <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+			        </configuration>
+			        <executions>
+			            <execution>
+			                <phase>process-resources</phase>
+			                <goals>
+			                    <goal>update</goal>
+			                </goals>
+			            </execution>
+			         </executions>
+			     </plugin>
+			    </plugins>    
+			  </build>
+	</profile>
+</profiles>
 
-  <build>
-  	<plugins>
-      <plugin>
-        <groupId>org.liquibase</groupId>
-        <artifactId>liquibase-maven-plugin</artifactId>
-        <version>3.7.0</version>
-        <configuration>
-         <propertyFile>src/main/db/liquibase.properties</propertyFile>
-          <changeLogFile>
-            src/main/db/changelog/master-changelog.xml
-          </changeLogFile>
-         <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
-        </configuration>
-        <executions>
-            <execution>
-                <phase>process-resources</phase>
-                <goals>
-                    <goal>update</goal>
-                </goals>
-            </execution>
-         </executions>
-     </plugin>
-    </plugins>    
-  </build>
   
   <dependencies>
     <dependency>
