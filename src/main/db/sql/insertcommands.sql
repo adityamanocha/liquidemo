@@ -19,12 +19,13 @@ INSERT INTO emp(EmpId, EmpName, EmpMob) VALUES (6, "PQR", 99606497);
 INSERT INTO emp(EmpId, EmpName, EmpMob) VALUES (7, "XYZ", 99606494);
 
 
---changeset devopsadmin:change_6
-DELIMITER $$
-
-CREATE PROCEDURE GetAllEmp()
+--changeset devopsadmin:change_6 runOnChange:true endDelimiter:#
+DROP PROCEDURE IF EXISTS sayHelloWorld;
+#
+CREATE PROCEDURE sayHelloWorld()
 BEGIN
-    SELECT *  FROM emp;
-END $$
+    SELECT 'Hello World From a MySql Database!';
+END
+#
 
 
