@@ -20,10 +20,11 @@ INSERT INTO emp(EmpId, EmpName, EmpMob) VALUES (7, "XYZ", 99606494);
 
 
 --changeset devopsadmin:change_6
+DELIMITER $$
+
 CREATE PROCEDURE GetAllEmp()
 BEGIN
     SELECT *  FROM emp;
-END;
-
+END $$
 
 
