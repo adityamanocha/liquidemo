@@ -15,9 +15,9 @@
     	</createTable>
     </changeSet>
     
-   <changeSet id="change_2" author="devopsadmin">
+  <!-- <changeSet id="change_2" author="devopsadmin">
        <sqlFile path="src/main/db/sql/insertcommands.sql"/>
-    </changeSet>
+    </changeSet>-->
     
-   <!-- <include file="src/main/db/sql/insertcommands.sql"/>-->
+    <include file="src/main/db/sql/insertcommands.sql"/>
 </databaseChangeLog>
