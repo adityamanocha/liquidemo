@@ -28,4 +28,7 @@ BEGIN
 END
 #
 
+--changeset devopsadmin:change_7
+INSERT INTO emp(EmpId, EmpName, EmpMob) VALUES (8, "Alok", 99606494);
+
 
