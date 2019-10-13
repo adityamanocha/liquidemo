@@ -16,7 +16,7 @@
     </changeSet>
     
    <changeSet id="change_2" author="devopsadmin">
-       <sqlFile path="db/sql/insertcommands.sql"/>
+       <sqlFile path="src/main/db/sql/insertcommands.sql"/>
     </changeSet>
     
     <include file="src/main/db/sql/insertcommands.sql"/>
