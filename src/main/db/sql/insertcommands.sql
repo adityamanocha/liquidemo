@@ -32,3 +32,9 @@ END
 INSERT INTO emp(EmpId, EmpName, EmpMob) VALUES (8, "Alok", 99606494);
 
 
+--changeset devopsadmin:change_8
+INSERT INTO emp(EmpId, EmpName, EmpMob) VALUES (9, "Kartik", 99606494);
+
+
+
+

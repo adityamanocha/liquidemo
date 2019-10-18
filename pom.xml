@@ -83,8 +83,7 @@
 			  </build>
 	</profile>
 </profiles>
-
-  
+ 
   <dependencies>
     <dependency>
 	    <groupId>mysql</groupId>
@@ -110,4 +109,19 @@
 	    <version>3.7.0</version>
 	</dependency>
   </dependencies>
+  
+  <distributionManagement>
+    <repository>
+        <id>artifactory</id>
+        <name>javaproj-mydemo</name>
+        <url>http://localhost:8500/artifactory/javaproj-mydemo/</url>
+    </repository>
+    <snapshotRepository>
+        <id>artifactory</id>
+        <name>javaproj-mydemo</name>
+        <url>http://localhost:8500/artifactory/javaproj-mydemo/</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
+  
 </project>
